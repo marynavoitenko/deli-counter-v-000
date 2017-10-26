@@ -11,7 +11,7 @@ def line(katz_deli)
     #   index += 1
     #   current_line << s
     # end
-    katz_deli.each.with_index(1) |name, index| {current_line << "#{index}. #{name}"}
+    katz_deli.each.with_index(1) {|name, index| current_line << "#{index}. #{name}"}
     puts "The line is currently: #{current_line.join(" ")}"
   end
 end
