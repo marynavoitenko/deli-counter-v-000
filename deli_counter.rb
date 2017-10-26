@@ -5,12 +5,13 @@ def line(katz_deli)
     puts "The line is currently empty."
   else
     current_line = []
-    index = 1
-    katz_deli.map do |name|
-      s = index.to_s + ". " + name
-      index += 1
-      current_line << s
-    end
+    # index = 1
+    # katz_deli.map do |name|
+    #   s = index.to_s + ". " + name
+    #   index += 1
+    #   current_line << s
+    # end
+    katz_deli.each.with_index(1) {|name, index| current_line << "#{index}. #{name}"}
     puts "The line is currently: #{current_line.join(" ")}"
   end
 end
